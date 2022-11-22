@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import ErrorText from "../../Components/ErrorBtn/ErrorText";
+import ErrorText from "../../Components/ErrorText/ErrorText";
 import { AuthContext } from "../../Context/AuthContext";
 import { logIn } from "../../constants/url";
 import s from "./LogIn.module.css";

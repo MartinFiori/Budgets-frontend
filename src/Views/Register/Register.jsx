@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { signup } from "../../constants/url";
+import ErrorText from "../../Components/ErrorText/ErrorText";
 import s from "./Register.module.css";
 
 const Register = () => {
@@ -56,8 +57,8 @@ const Register = () => {
 					<Link to={"/"}>Log in</Link>
 				</div>
 			) : (
-				<form onSubmit={handleSubmit}>
-					<h3>Register</h3>
+				<form onSubmit={handleSubmit} className={s.container}>
+					<h3 className={s.title}>Register</h3>
 					<label>Username:</label>
 					<input
 						type="text"
@@ -79,10 +80,13 @@ const Register = () => {
 						onChange={handleSetUser}
 						name="password"
 					/>
-					{error && <p style={{ color: "red" }}>{error}</p>}
-
+					<Link to={"/auth/signin"} className={s.link}>
+						Sign in
+					</Link>
+					{error && <ErrorText>{error}</ErrorText>}
 					<input
 						type="submit"
+						className={s.submitBtn}
 						value={loading ? "Loading..." : "Create user"}
 					/>
 				</form>

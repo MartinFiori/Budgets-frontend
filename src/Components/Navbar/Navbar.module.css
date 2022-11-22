@@ -1,0 +1,71 @@
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: var(--white);
+	background: var(--purple);
+	height: 60px;
+	padding: 1rem 2rem;
+}
+
+.userSection {
+	display: flex;
+	position: relative;
+	align-items: center;
+	gap: 30px;
+	height: 40px;
+}
+
+.userSection > * {
+	text-transform: capitalize;
+	gap: 5px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.userSection:hover .signOut {
+	display: inline-flex;
+	opacity: 1;
+}
+
+.signOut {
+	position: fixed;
+	background: var(--blue);
+	color: var(--black);
+	cursor: pointer;
+	padding: 0.6em;
+	border-radius: 5px;
+	display: none;
+	opacity: 0;
+	top: 45px;
+}
+
+.signOut:hover {
+	filter: brightness(1.1);
+}
+
+.icon {
+	font-size: 18px;
+}
+
+.link {
+	position: relative;
+	color: var(--white);
+}
+
+.link::after {
+	content: "";
+	background: var(--white);
+	height: 2px;
+	border-radius: 40px;
+	display: block;
+	transition: transform 250ms ease;
+	transform-origin: right;
+	transform: scaleX(0);
+}
+
+.link:hover::after {
+	transform-origin: left;
+	transform: scaleX(1);
+}
