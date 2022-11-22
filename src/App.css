@@ -4,12 +4,11 @@
 :root {
 	--black: #222831;
 	--grey: #393e46;
-	--blue: #00adb5;
-	--purple: #a63262;
-	--blue-20: rgba(0, 172, 181, 0.2);
+	--green: #005c49;
+	--green-20: rgba(0, 172, 181, 0.2);
 	--white: #eeeeee;
 	--lg-white: #eeeeee33;
-	--error: #e01f3d;
+	--error: #bc0024;
 }
 
 /* Resets */

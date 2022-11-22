@@ -21,7 +21,10 @@ const MovementProvider = ({ children }) => {
 		})
 			.then(res => res.json())
 			.then(data => setMovements(data))
-			.catch(err => console.log(err));
+			.catch(err => {
+				console.log(err);
+				window.reload();
+			});
 	}
 
 	function getMovements() {

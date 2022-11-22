@@ -1,0 +1,28 @@
+.table {
+	color: var(--black);
+	width: 100%;
+	background: var(--white);
+	text-transform: capitalize;
+}
+
+.row {
+	width: 100%;
+	text-align: center;
+}
+
+.row td,
+.row th {
+	padding-block: 8px;
+}
+
+.btn {
+	cursor: pointer;
+}
+
+.editBtn {
+	color: var(--green);
+}
+
+.deleteBtn {
+	color: var(--error);
+}
