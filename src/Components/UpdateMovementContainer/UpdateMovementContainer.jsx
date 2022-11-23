@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { MovementContext } from "../../Context/MovementContext";
+import ErrorText from "../ErrorText/ErrorText";
 import Loading from "../Loading/Loading";
 import s from "./UpdateMovementContainer.module.css";
 
@@ -35,6 +36,7 @@ const UpdateMovementContainer = ({ handleSetIsOpen, activeMovement }) => {
 		if (Object.values(inputs).every(Boolean)) {
 			setError(null);
 			updateMovement(inputs, activeMovement);
+			handleSetIsOpen();
 		} else {
 			setError("Complete all inputs");
 		}
@@ -45,9 +47,14 @@ const UpdateMovementContainer = ({ handleSetIsOpen, activeMovement }) => {
 			<div className={s.content}>
 				{!loading ? (
 					<>
-						<p onClick={handleSetIsOpen}>&times;</p>
-						<form onSubmit={handleSubmit}>
-							<h2>Update Movement</h2>
+						<p onClick={handleSetIsOpen} className={s.closeBtn}>
+							&times;
+						</p>
+						<form
+							onSubmit={handleSubmit}
+							className={s.formContainer}
+						>
+							<h2 className={s.title}>Update Movement</h2>
 							<label>Concept:</label>
 							<input
 								type="text"
@@ -91,8 +98,12 @@ const UpdateMovementContainer = ({ handleSetIsOpen, activeMovement }) => {
 								))}
 							</select>
 							<br />
-							{error && <p style={{ color: "red" }}>{error}</p>}
-							<input type="submit" value="Update" />
+							{error && <ErrorText>{error}</ErrorText>}
+							<input
+								type="submit"
+								value="Update"
+								className={s.updateBtn}
+							/>
 						</form>
 					</>
 				) : (

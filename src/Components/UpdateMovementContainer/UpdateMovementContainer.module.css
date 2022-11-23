@@ -12,7 +12,68 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 300px;
-	height: 400px;
+	width: 350px;
+	padding: 2rem;
+	background: var(--grey);
+}
+
+.title {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.closeBtn {
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 12px;
+	font-size: 1.5rem;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	background: var(--error);
+	border-radius: 50%;
+}
+
+.closeBtn:hover {
+	filter: brightness(1.1);
+}
+
+.formContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.formContainer > input:not([type="submit"]),
+.formContainer > select {
+	outline: none;
+	padding: 0.6em;
+	height: 34px;
+	border-radius: 5px;
+	border: none;
+}
+.formContainer > input:not([type="submit"]):focus,
+.formContainer > select:focus {
+	box-shadow: 0 0 0 2px var(--green);
+}
+
+.formContainer > select {
+	text-transform: capitalize;
+}
+
+.formContainer > label {
+	margin-bottom: 0.5rem;
+}
+
+.updateBtn {
+	padding: 0.7em;
+	color: var(--white);
 	background: var(--green);
+	border: none;
+	margin-top: 1rem;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.updateBtn:hover {
+	filter: brightness(1.1);
 }

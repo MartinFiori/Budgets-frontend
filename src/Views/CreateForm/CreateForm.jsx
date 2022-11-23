@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { MovementContext } from "../../Context/MovementContext";
+import s from "./CreateForm.module.css";
 
 const CreateForm = () => {
 	const { createMovement } = useContext(MovementContext);
@@ -31,7 +32,7 @@ const CreateForm = () => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmit} className={s.formContainer}>
 			<h2>Create Movement</h2>
 			<label>Concept:</label>
 			<input

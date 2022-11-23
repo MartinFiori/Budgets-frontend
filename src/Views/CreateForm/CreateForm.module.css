@@ -1,0 +1,5 @@
+.formContainer {
+	background: var(--grey);
+	width: 400px;
+	height: fit-content;
+}
