@@ -42,6 +42,10 @@ thead tr {
 	cursor: pointer;
 }
 
+.btn:hover {
+	filter: brightness(1.5);
+}
+
 .editBtn {
 	color: var(--green);
 }
