@@ -33,6 +33,7 @@ thead tr {
 .table tbody tr:nth-of-type(odd) {
 	background: #d7dfdd;
 }
+
 .table tbody tr:last-of-type {
 	border-bottom: 2px solid var(--green);
 }

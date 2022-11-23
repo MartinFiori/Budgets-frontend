@@ -38,10 +38,16 @@ const MovementsContainer = () => {
 								<td>${el.amount}</td>
 								<td>{el.type}</td>
 								<td>{el.creation_date}</td>
-								<td className={`${s.btn} ${s.editBtn}`}>
+								<td
+									className={`${s.btn} ${s.editBtn}`}
+									onClick={() => handleSetIsOpen(el.id)}
+								>
 									<AiOutlineEdit /> edit
 								</td>
-								<td className={`${s.btn} ${s.deleteBtn}`}>
+								<td
+									className={`${s.btn} ${s.deleteBtn}`}
+									onClick={() => deleteMovement(el.id)}
+								>
 									<BiTrashAlt /> delete
 								</td>
 							</tr>
