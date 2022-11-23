@@ -1,8 +1,19 @@
 .table {
+	margin-inline: auto;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
 	color: var(--black);
-	width: 100%;
+	min-width: 360px;
 	background: var(--white);
 	text-transform: capitalize;
+	border-collapse: collapse;
+	font-size: 0.9em;
+	box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+thead tr {
+	background: var(--green);
+	color: var(--white);
 }
 
 .row {
@@ -12,7 +23,18 @@
 
 .row td,
 .row th {
-	padding-block: 8px;
+	padding: 12px 15px;
+}
+
+.table tbody td:not(last-child) {
+	border-bottom: 1px solid var(--green);
+}
+
+.table tbody tr:nth-of-type(odd) {
+	background: #d7dfdd;
+}
+.table tbody tr:last-of-type {
+	border-bottom: 2px solid var(--green);
 }
 
 .btn {
